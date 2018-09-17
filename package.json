@@ -1,0 +1,51 @@
+{
+  "name": "@ccrpc/visualizations",
+  "version": "0.0.1",
+  "description": "CCRPC visualization web components using Stencil",
+  "module": "dist/esm/index.js",
+  "main": "dist/index.js",
+  "types": "dist/types/components.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "npx stencil build",
+    "start": "npx stencil build --dev --watch --serve",
+    "test": "jest",
+    "test.watch": "jest --watch"
+  },
+  "dependencies": {
+    "@ccrpc/charts": "../ccrpc-charts/",
+    "@types/d3": "^5.0.0",
+    "d3-fetch": "^1.1.2"
+  },
+  "devDependencies": {
+    "@stencil/core": "^0.12.4",
+    "@types/jest": "^23.3.1",
+    "jest": "^23.4.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/champaigncountyrpc/ccrpc-visualizations.git"
+  },
+  "author": "Champaign County Regional Planning Commission",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/champaigncountyrpc/ccrpc-visualizations/issues"
+  },
+  "homepage": "https://github.com/champaigncountyrpc/ccrpc-visualizations",
+  "jest": {
+    "transform": {
+      "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/@stencil/core/testing/jest.preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(tsx?|jsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json",
+      "jsx"
+    ]
+  }
+}
