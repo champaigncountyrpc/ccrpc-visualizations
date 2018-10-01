@@ -11,5 +11,10 @@ export const config: Config = {
       serviceWorker: null
     }
   ],
+  copy: [
+    {
+      src: 'data'
+    }
+  ],
   globalStyle: 'src/global/rpcviz.css'
 };

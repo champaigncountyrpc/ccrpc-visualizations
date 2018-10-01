@@ -36,7 +36,11 @@ export class BarChart {
   @Prop() stacked: boolean;
 
   async componentDidLoad() {
-    let data = await getData(this.url, this.el);
+    let data = await getData(this.url || this.el, {
+      rows: this.rows,
+      columns: this.columns,
+      switch: this.switch
+    });
     new Chart(this.chartEl, data, getOptions(this, [
       'legend',
       'legendAlignment',
